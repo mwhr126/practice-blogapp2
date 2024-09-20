@@ -34,5 +34,4 @@
 /config/master.key
 
 
-node_modules/
-*.pem
+/node_modules
