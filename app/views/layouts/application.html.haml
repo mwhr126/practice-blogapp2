@@ -10,6 +10,9 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %link{:href => "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
   %body
+    %p
+      現在ログインしているユーザー：
+      = current_user.name
     %header.header
       .header_logos
         - if !current_page?(root_path)
