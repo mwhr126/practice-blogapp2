@@ -7,7 +7,7 @@
 #  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :integer
+#  user_id    :integer          not null
 #
 # Indexes
 #
@@ -28,6 +28,10 @@ class Article < ApplicationRecord
   def display_created_at
     # binding.pry
     I18n.l(self.created_at, format: :default)
+  end
+
+  def author_name
+    user.display_name
   end
 
   private
